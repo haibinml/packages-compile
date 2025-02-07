@@ -59,8 +59,6 @@ mv -f feeds/packages.bak feeds/packages
 sed -i 's/CONFIG_ALL=y/CONFIG_ALL=n/' .config
 sed -i '/PACKAGE_kmod-/d' .config
 
-sed -i "/mediaurlbase/d" package/feeds/*/luci-theme*/root/etc/uci-defaults/*
-
 sed -i '/WARNING: Makefile/d' scripts/package-metadata.pl
 
 
