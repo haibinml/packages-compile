@@ -124,8 +124,6 @@ jobs:
             curl -fL -o sdk.tar.zst https://downloads.openwrt.org/releases/$REPO_BRANCH/targets/mediatek/filogic/openwrt-sdk-$REPO_BRANCH-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst
         elif [[ ${{matrix.target}} == "arm_cortex-a7_neon-vfpv4" ]]; then
             curl -fL -o sdk.tar.zst https://downloads.openwrt.org/releases/$REPO_BRANCH/targets/ipq40xx/generic/openwrt-sdk-$REPO_BRANCH-ipq40xx-generic_gcc-13.3.0_musl_eabi.Linux-x86_64.tar.zst
-        elif [[ ${{matrix.target}} == "arm_cortex-a7" ]]; then
-            curl -fL -o sdk.tar.zst https://downloads.openwrt.org/releases/$REPO_BRANCH/targets/mediatek/mt7629/openwrt-sdk-$REPO_BRANCH-mediatek-mt7629_gcc-13.3.0_musl_eabi.Linux-x86_64.tar.zst
         elif [[ ${{matrix.target}} == "arm_cortex-a9" ]]; then
             curl -fL -o sdk.tar.zst https://downloads.openwrt.org/releases/$REPO_BRANCH/targets/bcm53xx/generic/openwrt-sdk-$REPO_BRANCH-bcm53xx-generic_gcc-13.3.0_musl_eabi.Linux-x86_64.tar.zst
         elif [[ ${{matrix.target}} == "arm_cortex-a9_vfpv3-d16" ]]; then
