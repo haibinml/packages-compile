@@ -254,11 +254,11 @@ jobs:
                   success=true
                   break
                 fi
-                if [ "$success" != success ]; then
+              done
+              if [ "$success" != success ]; then
                   echo "Failed to get commit date with any token"
                   exit 1
-                fi
-              done
+              fi
               if [[ "$gitdate" && "$gitdate" != null ]]; then
                 gitdate="$(date -d "$gitdate" +%s)"
                 now="$(date -d "$(date)" +%s)"
