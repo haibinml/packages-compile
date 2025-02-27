@@ -49,14 +49,6 @@ sed -i \
 	-e 's,$(STAGING_DIR_HOST)/bin/upx,upx,' \
 	package/feeds/kiddin9/*/Makefile
 
-cp -f devices/common/.config .config
-mv -f feeds/base feeds/base.bak
-mv -f feeds/packages feeds/packages.bak
-make defconfig
-rm -Rf feeds/base
-mv -f feeds/base.bak feeds/base
-mv -f feeds/packages.bak feeds/packages
-sed -i 's/CONFIG_ALL=y/CONFIG_ALL=n/' .config
 sed -i '/PACKAGE_kmod-/d' .config
 
 sed -i '/WARNING: Makefile/d' scripts/package-metadata.pl
