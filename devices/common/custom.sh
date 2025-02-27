@@ -49,7 +49,7 @@ sed -i \
 	-e 's,$(STAGING_DIR_HOST)/bin/upx,upx,' \
 	package/feeds/kiddin9/*/Makefile
 
-sed -i '/PACKAGE_kmod-/d' .config
+cp -f devices/common/.config .config
 
 sed -i '/WARNING: Makefile/d' scripts/package-metadata.pl
 
